@@ -8,7 +8,7 @@ import { environment } from '@environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  title = 'GoodsManagementSystem';
   constructor(private translate: TranslateService) {
     translate.setDefaultLang(environment.defaultLang);
     translate.use(environment.defaultLang);

@@ -2,9 +2,9 @@ import * as MongoDB from 'mongodb';
 
 const url = 'mongodb://localhost:27017';
 export const dbName = 'open-sample';
-const _url = url+dbName;
+const _url = url + dbName;
 const connectOption = {
-    
+
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./goods-details.component.scss']
 })
 export class GoodsDetailsComponent implements OnInit {
-  goods: Goods;  
+  goods: Goods;
   constructor(private goodsService: GoodsService, private router: Router) {
   }
 

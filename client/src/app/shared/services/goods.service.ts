@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Goods } from '@shared/models/goods';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
@@ -15,7 +15,7 @@ export class GoodsService {
   ) { }
   //一覧
   list(): Observable<any> {
-    return this.http.post(this.url + '/goods/search', {'Content-Type': 'application/json'})
+    return this.http.post(this.url + '/goods/search', { 'Content-Type': 'application/json' })
       .pipe(
         map((response: any) => {
           if (response) {
@@ -58,11 +58,11 @@ export class GoodsService {
 
   update(goods: Goods): Observable<any> {
     return this.http.put(this.url + '/goods/' + goods.goods_id, goods)
-    .pipe(
-      map((response: any) => { }
-      ),
-      catchError(this.handleError())
-    )
+      .pipe(
+        map((response: any) => { }
+        ),
+        catchError(this.handleError())
+      )
   }
 
   handleError<T>(operation = 'operation', result?: T) {

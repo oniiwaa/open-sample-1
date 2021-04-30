@@ -1,9 +1,8 @@
-import * as Express from 'express';
+import * as express from 'express';
 import mongodbClient from '../../middleware/mongodbClient';
 import { GoodsDocument } from '../../middleware/GoodsDocument';
+const router = express.Router();
 
-
-const router = Express.Router();
 //商品情報登録
 router.post('/', (req, res, next) => {
     // パラメータ取得
@@ -134,8 +133,7 @@ router.get('/:goods_id', (req, res, next) => {
                     client.close();
                 }
             });
-        })
-            ;
+        });
     });
 });
 

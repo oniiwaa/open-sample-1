@@ -1,0 +1,25 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title class="login-title">ユーザー名とパスワードを入力してボタンを押してください</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form (ngSubmit)="saveGoods()" #formCheck="ngForm" [formGroup]="userForm">
+            <div class="create-line">
+                <label translate>id</label>
+                <div>
+                    <input type="number" formControlName="id" required>
+                </div>
+            </div>
+            <div class="create-line">
+                <label translate>password</label>
+                <div>
+                    <input type="text" formControlName="password" required>
+                </div>
+            </div>
+            <mat-card-actions>
+                <button mat-button>cancel</button>
+                <button mat-button>login</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

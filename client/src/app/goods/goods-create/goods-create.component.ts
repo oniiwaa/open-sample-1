@@ -19,13 +19,13 @@ export class GoodsCreateComponent implements OnInit {
   ngOnInit(): void {
     this.goodsForm = new FormGroup({
       name: new FormControl('', [
-        Validators.required,     
+        Validators.required,
         Validators.maxLength(30)
       ]),
       goods_id: new FormControl('', [
-        Validators.required,    
-        Validators.minLength(5),  
-        Validators.maxLength(5),  
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(5),
         Validators.pattern('^[A]+[0-9]{4}')
       ]),
       size: new FormControl('', [

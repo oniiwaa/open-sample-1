@@ -12,11 +12,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule, MatSpinner } from '@angular/material/progress-spinner'
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from '@app/header/header.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginComponent } from './login/login.component';
+import { Login2Component } from './login2/login2.component';
+import { RedirectComponent } from './redirect/redirect.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +33,10 @@ export function createTranslateLoader(http: HttpClient) {
     GoodsUpdateComponent,
     GoodsCreateComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent,
+    Login2Component,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     MatTableModule,
     MatProgressSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   entryComponents: [
     MatSpinner
